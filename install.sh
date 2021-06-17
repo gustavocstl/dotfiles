@@ -14,6 +14,11 @@ if [[ $? != 0 ]] ; then
     echo "╠═Brew installed"
 fi
 
+if ! brew ls --versions tmux > /dev/null; then
+    brew install tmux
+    echo "╠═Tmux installed"
+fi
+
 if ! brew ls --versions zsh > /dev/null; then
     brew install zsh
     echo "╠═Zsh installed"

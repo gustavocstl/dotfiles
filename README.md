@@ -15,6 +15,7 @@ sh install.sh
 
 - xcode
 - brew
+    - tmux
     - zsh
     - neovim
     - universal-ctags
@@ -32,6 +33,7 @@ Installs:
 ║
 ╠═Xcode installed
 ╠═Brew installed
+╠═Tmux installed
 ╠═Zsh installed
 ╠═Neovim installed
 ╠═Universal-ctags installed
@@ -68,6 +70,7 @@ Installs:
 ║ ╠═Created gitconfig link
 ║ ╠═Created vimrc link
 ║ ╠═Created init.vim link
+║ ╠═Created tmux.conf link
 ╠═╩═Symlinks finished
 ║
 ╙Dotfiles finished

@@ -21,4 +21,9 @@ if [ ! -f "$HOME/.config/nvim/init.vim" ]; then
     echo "║ ╠═Created init.vim link"
 fi
 
+if [ ! -f "$HOME/.tmux.conf" ]; then
+    ln -s $(pwd)/tmux/.tmux.conf $HOME/.tmux.conf
+    echo "║ ╠═Created tmux.conf link"
+fi
+
 echo "╠═╩═Symlinks finished"
