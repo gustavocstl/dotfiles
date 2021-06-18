@@ -73,6 +73,8 @@ nnoremap <silent> <s-Up> :m -2<CR>
 vnoremap <C-c> "+y<CR>
 nnoremap <C-S-f> :Ag<CR>
 nnoremap <C-p> :Files<CR>
+" Format json
+nnoremap <C-S-h> :%!jq .<CR>
 " \l       : list buffers
 " \b \f \g : go back/forward/last-used
 " \1 \2 \3 : go to buffer 1/2/3 etc
