@@ -3,9 +3,10 @@ echo "╓Dotfiles setup"
 
 source $(pwd)/vars
 
-if [ ! -d "/Applications/Xcode.app" ]; then
-    xcode-select --install
-    echo "╠═Xcode installed"
+which -s xcode-select
+if [[ $? != 0 ]]; then
+    echo "Xcode needed before continue. Run xcode-select install"
+    exit 2
 fi
 
 which -s brew
