@@ -30,4 +30,9 @@ if [ ! -f "$HOME/.tmux.conf" ]; then
     echo "║ ╠═Created tmux.conf link"
 fi
 
+if [ ! -d "/Library/Java/JavaVirtualMachines/openjdk.jdk" ]; then
+    sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+    echo "║ ╠═Created openjdk link"
+fi
+
 echo "╠═╩═Symlinks finished"

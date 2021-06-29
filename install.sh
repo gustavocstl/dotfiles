@@ -50,9 +50,26 @@ if ! brew ls --versions youtube-dl > /dev/null; then
     echo "╠═Youtube-dl installed"
 fi
 
+if ! brew ls --versions gnupg > /dev/null; then
+    brew install gnupg
+    echo "╠═GnuPG installed"
+fi
+
 if [ ! -d "/Applications/Alacritty.app" ]; then
     brew install alacritty
     echo "╠═Alacritty installed"
+fi
+
+if [ ! -d "/Applications/DBeaver.app" ]; then
+    brew install dbeaver-community
+    echo "╠═DBeaver installed"
+fi
+
+if [ ! -d "/usr/local/opt/openjdk" ]; then
+    brew tap adoptopenjdk/openjdk && \
+    brew install java && \
+    brew install adoptopenjdk8
+    echo "╠═Java installed"
 fi
 
 if [ ! -f "$HOME/.vim/autoload/plug.vim" ]; then

@@ -22,7 +22,10 @@ sh install.sh
     - the_silver_searcher
     - ffmpeg
     - youtube-dl
+    - gnupg
     - alacritty
+    - dbeaver
+    - java (8 & latest)
 - plug.vim
 - oh-my-zsh
 - asdf (go, node, python)
@@ -40,7 +43,10 @@ Installs:
 ╠═The_silver_searcher installed
 ╠═Ffmpeg installed
 ╠═Youtube-dl installed
+╠═GnuPG installed
 ╠═Alacritty installed
+╠═DBeaver installed
+╠═Java installed
 ╠═Plug vim installed for vim
 ╠═Plug vim installed for nvim
 ║
@@ -71,6 +77,7 @@ Installs:
 ║ ╠═Created vimrc link
 ║ ╠═Created init.vim link
 ║ ╠═Created tmux.conf link
+║ ╠═Created openjdk link
 ╠═╩═Symlinks finished
 ║
 ╙Dotfiles finished
