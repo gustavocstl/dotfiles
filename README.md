@@ -23,6 +23,7 @@ sh install.sh
     - ffmpeg
     - youtube-dl
     - gnupg
+    - wget
     - alacritty
     - dbeaver
     - java (8 & latest)
@@ -44,6 +45,7 @@ Installs:
 ╠═Ffmpeg installed
 ╠═Youtube-dl installed
 ╠═GnuPG installed
+╠═Wget installed
 ╠═Alacritty installed
 ╠═DBeaver installed
 ╠═Java installed

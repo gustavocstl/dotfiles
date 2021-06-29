@@ -55,6 +55,11 @@ if ! brew ls --versions gnupg > /dev/null; then
     echo "╠═GnuPG installed"
 fi
 
+if ! brew ls --versions wget > /dev/null; then
+    brew install wget
+    echo "╠═Wget installed"
+fi
+
 if [ ! -d "/Applications/Alacritty.app" ]; then
     brew install alacritty
     echo "╠═Alacritty installed"
