@@ -60,6 +60,11 @@ if ! brew ls --versions wget > /dev/null; then
     echo "╠═Wget installed"
 fi
 
+if ! brew ls --versions kubectl > /dev/null; then
+    brew install kubectl
+    echo "╠═Kubectl installed"
+fi
+
 if [ ! -d "/Applications/Alacritty.app" ]; then
     brew install alacritty
     echo "╠═Alacritty installed"
