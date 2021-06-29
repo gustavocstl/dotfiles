@@ -67,6 +67,16 @@ if [ ! -f "$HOME/.local/share/nvim/site/autoload/plug.vim" ]; then
     echo "╠═Plug vim installed for nvim"
 fi
 
+if ! brew ls --versions figlet > /dev/null; then
+    brew install figlet 
+    echo "╠═Figlet installed"
+fi
+
+if ! brew ls --versions cowsay > /dev/null; then
+    brew install cowsay 
+    echo "╠═Cowsay installed"
+fi
+
 echo "║"
 sh $(pwd)/zsh/setup.sh
 echo "║"
@@ -78,3 +88,6 @@ sh $(pwd)/symlinks.sh
 echo "║"
 
 echo "╙Dotfiles finished"
+
+figlet dotfiles
+cowsay Dotfiles finished!
