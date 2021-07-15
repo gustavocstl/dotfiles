@@ -32,6 +32,9 @@ set fileencoding=utf-8
 set shiftwidth=4
 set autoindent
 set smartindent
+set undofile
+set undodir=~/.config/nvim/undo
+set undolevels=10000
 colorscheme onehalfdark
 
 let g:airline_theme='onehalfdark'
