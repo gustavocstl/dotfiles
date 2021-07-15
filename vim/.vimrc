@@ -14,6 +14,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'APZelos/blamer.nvim'
 call plug#end()
 
 syntax on
@@ -41,7 +42,7 @@ let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:lamer_enabled = 1
 let g:blamer_show_in_visual_modes = 0
-let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-cfn-lint', 'coc-jedi', 'coc-phpls']
+let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-cfn-lint', 'coc-python', 'coc-phpls', 'coc-git']
 let g:indentguides_spacechar = '▏'
 let g:indentguides_tabchar = '▏'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
@@ -62,6 +63,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ 'Ignored'   : '☒',
     \ "Unknown"   : "?"
     \ }
+let g:blamer_enabled = 1
 
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-s> :w!<CR>
