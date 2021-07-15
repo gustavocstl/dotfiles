@@ -104,6 +104,11 @@ if ! brew ls --versions cowsay > /dev/null; then
     echo "╠═Cowsay installed"
 fi
 
+if ! brew ls --versions jq > /dev/null; then
+    brew install jq
+    echo "╠═Jq installed"
+fi
+
 echo "║"
 sh $(pwd)/zsh/setup.sh
 echo "║"

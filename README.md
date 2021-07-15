@@ -28,6 +28,7 @@ sh install.sh
     - alacritty
     - dbeaver
     - java (8 & latest)
+    - jq
 - plug.vim
 - oh-my-zsh
 - asdf (go, node, python)

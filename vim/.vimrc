@@ -64,6 +64,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 let g:blamer_enabled = 1
+let g:vim_json_conceal=0
 
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-s> :w!<CR>
