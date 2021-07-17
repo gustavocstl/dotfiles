@@ -80,7 +80,7 @@ nnoremap <C-S-h> :%!jq .<CR>
 nnoremap <Leader>b :bp<CR>
 nnoremap <Leader>f :bn<CR>
 nnoremap <Leader>g :e#<CR>
-nnoremap <Leader>1 :ls<CR>:b<space>
+nnoremap <Leader>1 :b<space>
 
 " CoC.nvim
 inoremap <silent><expr> <TAB>
