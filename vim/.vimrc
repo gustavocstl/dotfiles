@@ -8,13 +8,11 @@ Plug 'dense-analysis/ale'
 Plug 'thaerkh/vim-indentguides'
 Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'APZelos/blamer.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'APZelos/blamer.nvim'
 call plug#end()
 
 syntax on
@@ -43,8 +41,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 1
 let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
-let g:lamer_enabled = 1
-let g:blamer_show_in_visual_modes = 0
 let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-cfn-lint', 'coc-python', 'coc-phpls', 'coc-git']
 let g:indentguides_spacechar = '▏'
 let g:indentguides_tabchar = '▏'
@@ -66,7 +62,6 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ 'Ignored'   : '☒',
     \ "Unknown"   : "?"
     \ }
-let g:blamer_enabled = 1
 let g:vim_json_conceal=0
 
 nnoremap <C-n> :NERDTreeToggle<CR>
@@ -97,8 +92,6 @@ nnoremap <Leader>7 :7b<CR>
 nnoremap <Leader>8 :8b<CR>
 nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
-" It's useful to show the buffer number in the status line.
-
 " CoC.nvim
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
