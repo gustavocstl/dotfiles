@@ -109,6 +109,12 @@ if ! brew ls --versions jq > /dev/null; then
     echo "╠═Jq installed"
 fi
 
+if ! brew ls --versions ranger > /dev/null; then
+    brew install ranger
+    echo "╠═Ranger installed"
+fi
+
+
 echo "║"
 sh $(pwd)/zsh/setup.sh
 echo "║"

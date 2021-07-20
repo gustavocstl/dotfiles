@@ -29,6 +29,7 @@ sh install.sh
     - dbeaver
     - java (8 & latest)
     - jq
+    - ranger (file manager)
 - plug.vim
 - oh-my-zsh
 - asdf (go, node, python)
