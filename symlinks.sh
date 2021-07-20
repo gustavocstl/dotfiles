@@ -35,4 +35,9 @@ if [ ! -d "/Library/Java/JavaVirtualMachines/openjdk.jdk" ]; then
     echo "║ ╠═Created openjdk link"
 fi
 
+if [ ! -f "$HOME/.config/ranger/rc.conf" ]; then
+    ln -s $(pwd)/ranger/rc.conf $HOME/.config/ranger/rc.conf
+    echo "║ ╠═Created ranger config link"
+fi
+
 echo "╠═╩═Symlinks finished"

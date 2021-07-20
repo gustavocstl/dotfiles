@@ -13,6 +13,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 call plug#end()
 
 syntax on
@@ -98,10 +100,3 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 " Change to normal mode with ESC
 tnoremap <Esc> <C-\><C-n>
-" Start terminal in insert mode
-au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-function! OpenTerminal()
-  belowright split term://zsh
-  resize 15
-endfunction
-nnoremap <c-j> :call OpenTerminal()<CR>
