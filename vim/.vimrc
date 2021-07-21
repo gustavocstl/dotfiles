@@ -64,8 +64,10 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ 'Ignored'   : '☒',
     \ "Unknown"   : "?"
     \ }
-let g:vim_json_conceal=0
+let g:vim_json_conceal = 0
+let g:ranger_map_keys = 0
 
+map <leader>e :Ranger<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-s> :w!<CR>
 nnoremap <C-q> :qa<CR>
