@@ -25,6 +25,7 @@ sh install.sh
     - gnupg
     - wget
     - kubectl
+    - minikube
     - alacritty
     - dbeaver
     - java (8 & latest)

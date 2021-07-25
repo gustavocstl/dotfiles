@@ -65,6 +65,11 @@ if ! brew ls --versions kubectl > /dev/null; then
     echo "╠═Kubectl installed"
 fi
 
+if ! brew ls --versions minikube > /dev/null; then
+    brew install minikube
+    echo "╠═Minikube installed"
+fi
+
 if [ ! -d "/Applications/Alacritty.app" ]; then
     brew install alacritty
     echo "╠═Alacritty installed"
