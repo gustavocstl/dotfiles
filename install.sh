@@ -70,6 +70,11 @@ if ! brew ls --versions minikube > /dev/null; then
     echo "╠═Minikube installed"
 fi
 
+if ! brew ls --versions helm > /dev/null; then
+    brew install helm
+    echo "╠═Helm installed"
+fi
+
 if [ ! -d "/Applications/Alacritty.app" ]; then
     brew install alacritty
     echo "╠═Alacritty installed"
