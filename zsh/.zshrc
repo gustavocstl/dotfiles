@@ -33,3 +33,12 @@ source $ZSH/oh-my-zsh.sh
 . $HOME/.asdf/asdf.sh
 
 alias java8='export JAVA_HOME=$JAVA_8_HOME'
+alias minikube-env='eval $(minikube docker-env)'
+alias kg='kubectl get'
+alias kgpo='kubectl get pods'
+alias kgd='kubectl get deployments'
+alias kl='kubectl logs -f'
+alias ka='kubectl apply -f'
+alias krmf='kubectl delete -f'
+alias krm='kubectl delete'
+alias kex='kubectl exec -it'
