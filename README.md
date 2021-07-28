@@ -26,6 +26,7 @@ sh install.sh
     - wget
     - kubectl
     - minikube
+    - kubectx
     - helm
     - alacritty
     - dbeaver
