@@ -80,6 +80,11 @@ if ! brew ls --versions helm > /dev/null; then
     echo "╠═Helm installed"
 fi
 
+if ! brew ls --versions helmfile > /dev/null; then
+    brew install helmfile
+    echo "╠═Helmfile installed"
+fi
+
 if [ ! -d "/Applications/Alacritty.app" ]; then
     brew install alacritty
     echo "╠═Alacritty installed"

@@ -28,6 +28,7 @@ sh install.sh
     - minikube
     - kubectx
     - helm
+    - helmfile
     - alacritty
     - dbeaver
     - java (8 & latest)
