@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "╓Setup"
+
+_log()
+{
+    echo "╠═$1"
+}
+
+export -f _log
+
+if [ "$(uname -s)" == "Darwin" ]; then
+    . ./installers/install-darwin.sh
+else
+    . ./installers/install-linux.sh
+fi
+
+echo "╙Finished"
+
+figlet dotfiles
+cowsay Dotfiles finished!

@@ -1,11 +1,13 @@
 #!/bin/bash
-echo "╠═╦═Git setup"
+_log "Git setup"
+
 cat << EOF > $(pwd)/git/.gitconfig
 [user]
     name = $GIT_USER
     email = $GIT_EMAIL
 EOF
-echo "║ ╠═User: $GIT_USER"
-echo "║ ╠═Email: $GIT_EMAIL"
-echo "║ ╠═Config file created in $(pwd)/git/.gitconfig"
-echo "╠═╩═Git finished"
+_log "User: $GIT_USER"
+_log "Email: $GIT_EMAIL"
+_log "Config file created in $(pwd)/git/.gitconfig"
+
+_log "Git finished"
