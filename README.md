@@ -14,6 +14,11 @@ Execute install:
 ./install
 ```
 
+For linux, if is needed to install essential libs:
+```sh
+./install --essentials
+```
+
 Installs:
 - tmux
 - zsh
