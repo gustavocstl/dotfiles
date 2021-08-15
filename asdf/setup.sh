@@ -27,6 +27,13 @@ if [ ! -d "$HOME/.asdf/installs/golang" ]; then
     _log "Golang plugin added"
 fi
 
+if [ ! -d "$HOME/.asdf/installs/dotnet" ]; then
+    asdf plugin-add dotnet-core https://github.com/emersonsoares/asdf-dotnet-core.git && \
+    asdf install dotnet-core 3.1.100 && \
+    asdf global dotnet-core 3.1.100
+    _log "Dotnet plugin added"
+fi
+
 asdf reshim
 
 _log "Asdf finished"
