@@ -15,6 +15,9 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
+Plug 'gruvbox-community/gruvbox'
+Plug 'nickspoons/vim-sharpenup'
+Plug 'OmniSharp/omnisharp-vim'
 call plug#end()
 
 syntax on
@@ -35,8 +38,9 @@ set smartindent
 set undofile
 set undodir=~/.config/nvim/undo
 set undolevels=10000
-colorscheme onehalfdark
+colorscheme gruvbox
 
+let s:using_snippets = 0
 let g:airline_theme='onehalfdark'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -66,6 +70,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ }
 let g:vim_json_conceal = 0
 let g:ranger_map_keys = 0
+let g:ale_linters = { 'cs': ['OmniSharp'] }
 
 map <leader>e :Ranger<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
@@ -81,8 +86,8 @@ nnoremap <C-p> :Files<CR>
 " Format json
 nnoremap <C-S-h> :%!jq .<CR>
 " \b \f \g : go back/forward/last-used
-nnoremap <Leader>b :bp<CR>
-nnoremap <Leader>f :bn<CR>
+nnoremap <C-k> :bp<CR>
+nnoremap <C-l> :bn<CR>
 nnoremap <Leader>g :e#<CR>
 nnoremap <Leader>1 :b<space>
 
@@ -102,3 +107,7 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 " Change to normal mode with ESC
 tnoremap <Esc> <C-\><C-n>
+
+" Define sharpenup as , to execute commands
+let maplocalleader = ","
+let g:sharpnup_map_prefix = ',os'
