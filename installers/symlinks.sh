@@ -25,6 +25,11 @@ if [ ! -f "$HOME/.vimrc" ]; then
     _log "Created vimrc link"
 fi
 
+if [ ! -f "$HOME/.config/nvim/coc-settings.json" ]; then
+    ln -s $(pwd)/vim/coc-settings.json $HOME/.config/nvim/coc-settings.json
+    _log "Created coc settings link"
+fi
+
 if [ ! -f "$HOME/.config/nvim/init.vim" ]; then
     ln -s $(pwd)/vim/.vimrc $HOME/.config/nvim/init.vim
     _log "Created init.vim link"
