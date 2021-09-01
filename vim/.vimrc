@@ -18,6 +18,7 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'nickspoons/vim-sharpenup'
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'psf/black', { 'branch': 'stable' }
 call plug#end()
 
 syntax on
@@ -111,3 +112,5 @@ tnoremap <Esc> <C-\><C-n>
 " Define sharpenup as , to execute commands
 let maplocalleader = ","
 let g:sharpnup_map_prefix = ',os'
+
+autocmd BufWritePre *.py execute ':Black'

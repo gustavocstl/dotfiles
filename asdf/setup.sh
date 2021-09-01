@@ -16,7 +16,10 @@ fi
 if [ ! -d "$HOME/.asdf/installs/python" ]; then
     asdf plugin add python && \
     asdf install python 3.9.1 && \
-    asdf global python 3.9.1
+    asdf global python 3.9.1 && \
+    asdf reshim && \
+    pip install neovim && \
+    pip install black
     _log "Python plugin added"
 fi
 
