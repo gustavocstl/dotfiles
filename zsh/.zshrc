@@ -12,6 +12,8 @@ else
     . $HOME/dotfiles/zsh/zshrc-linux.sh
 fi
 
+. $HOME/dotfiles/zsh/custom.sh
+
 plugins=(
     kubectl
     git
