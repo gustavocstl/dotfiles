@@ -72,6 +72,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 let g:vim_json_conceal = 0
 let g:ranger_map_keys = 0
 let g:ale_linters = { 'cs': ['OmniSharp'] }
+let g:fzf_layout = { 'down': '~40%' }
 
 map <leader>e :Ranger<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
