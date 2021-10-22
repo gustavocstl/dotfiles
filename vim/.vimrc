@@ -19,6 +19,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'nickspoons/vim-sharpenup'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'psf/black', { 'branch': 'stable' }
+Plug 'puremourning/vimspector'
 call plug#end()
 
 syntax on
@@ -73,6 +74,8 @@ let g:vim_json_conceal = 0
 let g:ranger_map_keys = 0
 let g:ale_linters = { 'cs': ['OmniSharp'] }
 let g:fzf_layout = { 'down': '~40%' }
+let g:vimspector_enable_mappings = 'HUMAN'
+let g:vimspector_install_gadgets = [ 'vscode-go', 'debugpy', 'debugger-for-chrome', 'netcoredbg', 'vscode-node-debug2' ]
 
 map <leader>e :Ranger<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
@@ -115,3 +118,10 @@ let maplocalleader = ","
 let g:sharpnup_map_prefix = ',os'
 
 autocmd BufWritePre *.py execute ':Black'
+
+" mnemonic 'di' = 'debug inspect' (pick your own, if you prefer!)
+
+" for normal mode - the word under the cursor
+nmap <Leader>di <Plug>VimspectorBalloonEval
+" for visual mode, the visually selected text
+xmap <Leader>di <Plug>VimspectorBalloonEval
