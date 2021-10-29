@@ -125,3 +125,6 @@ autocmd BufWritePre *.py execute ':Black'
 nmap <Leader>di <Plug>VimspectorBalloonEval
 " for visual mode, the visually selected text
 xmap <Leader>di <Plug>VimspectorBalloonEval
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
