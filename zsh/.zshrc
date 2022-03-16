@@ -37,3 +37,7 @@ alias ka='kubectl apply -f'
 alias krmf='kubectl delete -f'
 alias krm='kubectl delete'
 alias kex='kubectl exec -it'
+alias editvim="nvim ~/dotfiles/vim/.vimrc"
+alias editcustom="nvim ~/dotfiles/zsh/custom.sh"
+alias e64="cat | tr -d \"\\n\" | base64 -w 0"
+alias d64="base64 -d"

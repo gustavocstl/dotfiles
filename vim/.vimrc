@@ -1,5 +1,4 @@
 call plug#begin()
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -15,7 +14,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
-Plug 'gruvbox-community/gruvbox'
+Plug 'wojciechkepka/vim-github-dark'
 Plug 'nickspoons/vim-sharpenup'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'psf/black', { 'branch': 'stable' }
@@ -40,17 +39,17 @@ set smartindent
 set undofile
 set undodir=~/.config/nvim/undo
 set undolevels=10000
-colorscheme gruvbox
+colorscheme ghdark 
 
 let s:using_snippets = 0
-let g:airline_theme='onehalfdark'
+let g:airline_theme='ghdark'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 1
 let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-cfn-lint', 'coc-python', 'coc-phpls', 'coc-git']
-let g:indentguides_spacechar = '▏'
+let g:indentguides_spacechar = '┆'
 let g:indentguides_tabchar = '▏'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let NERDTreeShowHidden = 1
@@ -70,7 +69,6 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ 'Ignored'   : '☒',
     \ "Unknown"   : "?"
     \ }
-let g:vim_json_conceal = 0
 let g:ranger_map_keys = 0
 let g:ale_linters = { 'cs': ['OmniSharp'] }
 let g:fzf_layout = { 'down': '~40%' }
@@ -87,16 +85,29 @@ nnoremap <silent> <s-Down> :m +1<CR>
 nnoremap <silent> <s-Up> :m -2<CR>
 vnoremap <C-c> "+y<CR>
 nnoremap <C-S-f> :Ag<CR>
+nnoremap <C-f> :Ag<CR>
 nnoremap <C-p> :Files<CR>
-" Format json
-nnoremap <C-S-h> :%!jq .<CR>
+
 " \b \f \g : go back/forward/last-used
 nnoremap <C-k> :bp<CR>
 nnoremap <C-l> :bn<CR>
 nnoremap <Leader>g :e#<CR>
 nnoremap <Leader>1 :b<space>
 
-" CoC.nvim
+" Vimspector
+nnoremap <Leader>dd :call vimspector#Launch()<CR>
+nnoremap <Leader>de :call vimspector#Reset()<CR>
+nnoremap <Leader>dc :call vimspector#Continue()<CR>
+
+nnoremap <Leader>dt :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <Leader>dT :call vimspector#ClearBreakpoints()<CR>
+
+nmap <Leader>dk <Plug>VimspectorRestart
+nmap <Leader>dh <Plug>VimspectorStepOut
+nmap <Leader>dl <Plug>VimspectorStepInto
+nmap <Leader>dj <Plug>VimspectorStepOver
+
+" CoC.nvim Autocompletions
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -118,13 +129,4 @@ let maplocalleader = ","
 let g:sharpnup_map_prefix = ',os'
 
 autocmd BufWritePre *.py execute ':Black'
-
-" mnemonic 'di' = 'debug inspect' (pick your own, if you prefer!)
-
-" for normal mode - the word under the cursor
-nmap <Leader>di <Plug>VimspectorBalloonEval
-" for visual mode, the visually selected text
-xmap <Leader>di <Plug>VimspectorBalloonEval
-
-filetype plugin on
-set omnifunc=syntaxcomplete#Complete
+autocmd FileType cs setlocal shiftwidth=4 tabstop=4 expandtab
