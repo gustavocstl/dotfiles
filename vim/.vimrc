@@ -19,6 +19,7 @@ Plug 'nickspoons/vim-sharpenup'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'psf/black', { 'branch': 'stable' }
 Plug 'puremourning/vimspector'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 syntax on
@@ -39,6 +40,7 @@ set smartindent
 set undofile
 set undodir=~/.config/nvim/undo
 set undolevels=10000
+set shellcmdflag=-ci
 colorscheme ghdark 
 
 let s:using_snippets = 0
@@ -51,6 +53,7 @@ let g:airline#extensions#tabline#tab_nr_type = 1
 let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-cfn-lint', 'coc-python', 'coc-phpls', 'coc-git']
 let g:indentguides_spacechar = '┆'
 let g:indentguides_tabchar = '▏'
+let g:indentguides_ignorelist = ['json']
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
@@ -130,3 +133,4 @@ let g:sharpnup_map_prefix = ',os'
 
 autocmd BufWritePre *.py execute ':Black'
 autocmd FileType cs setlocal shiftwidth=4 tabstop=4 expandtab
+autocmd FileType json setlocal shiftwidth=2 tabstop=2 expandtab

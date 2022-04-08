@@ -31,6 +31,7 @@ source $ZSH/oh-my-zsh.sh
 alias minikube-env='eval $(minikube docker-env)'
 alias kg='kubectl get'
 alias kgpo='kubectl get pods'
+alias kgpoa='kubectl get pods --all-namespaces'
 alias kgd='kubectl get deployments'
 alias kl='kubectl logs -f'
 alias ka='kubectl apply -f'
@@ -39,5 +40,3 @@ alias krm='kubectl delete'
 alias kex='kubectl exec -it'
 alias editvim="nvim ~/dotfiles/vim/.vimrc"
 alias editcustom="nvim ~/dotfiles/zsh/custom.sh"
-alias e64="cat | tr -d \"\\n\" | base64 -w 0"
-alias d64="base64 -d"
