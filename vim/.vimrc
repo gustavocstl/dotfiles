@@ -51,7 +51,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 1
 let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
-let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-cfn-lint', 'coc-python', 'coc-phpls', 'coc-git', 'coc-tsserver', 'coc-eslint', 'coc-omnisharp']
+let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-cfn-lint', 'coc-phpls', 'coc-git', 'coc-tsserver', 'coc-eslint', 'coc-omnisharp', 'coc-pyright']
 let g:indentguides_spacechar = '┆'
 let g:indentguides_tabchar = '▏'
 let g:indentguides_ignorelist = ['json']
@@ -170,3 +170,5 @@ autocmd FileType cs setlocal shiftwidth=4 tabstop=4 expandtab
 autocmd FileType json setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType yml setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType javascriptreact setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab
