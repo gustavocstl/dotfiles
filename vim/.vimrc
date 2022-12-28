@@ -32,6 +32,7 @@ Plug 'hrsh7th/vim-vsnip'
 call plug#end()
 
 syntax on
+set clipboard=unnamedplus
 set nolist
 set number
 set termguicolors
@@ -68,7 +69,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-let NERDTreeIgnore = []
+let NERDTreeIgnore = ['__pycache__']
 let NERDTreeStatusline = ''
 let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
@@ -149,6 +150,7 @@ nmap <silent> ga :CocAction<CR>
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call ShowDocumentation()<CR>
+nnoremap <silent> T <Cmd>lua vim.lsp.buf.hover()<CR>
 
 function! ShowDocumentation()
   if CocAction('hasProvider', 'hover')
