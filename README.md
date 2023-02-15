@@ -24,6 +24,7 @@ Installs:
 - tmux
 - zsh
 - neovim
+- lunarvim
 - universal-ctags
 - the_silver_searcher
 - ffmpeg

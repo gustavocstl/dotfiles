@@ -1,7 +1,0 @@
-{
-    "eslint.alwaysShowStatus": true,
-    "python.linting.flake8Enabled": true,
-    "python.linting.enabled": true,
-    "python.linting.flake8Path": "/home/gustavo/.asdf/shims/flake8",
-    "suggest.autoTrigger": "none"
-}

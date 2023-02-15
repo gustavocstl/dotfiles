@@ -20,19 +20,9 @@ if [ ! -f "$HOME/.gitconfig" ]; then
     _log "Created gitconfig link"
 fi
 
-if [ ! -f "$HOME/.vimrc" ]; then
-    ln -s $(pwd)/vim/.vimrc $HOME/.vimrc
-    _log "Created vimrc link"
-fi
-
 if [ ! -f "$HOME/.config/nvim/coc-settings.json" ]; then
     ln -s $(pwd)/vim/coc-settings.json $HOME/.config/nvim/coc-settings.json
     _log "Created coc settings link"
-fi
-
-if [ ! -f "$HOME/.config/nvim/init.vim" ]; then
-    ln -s $(pwd)/vim/.vimrc $HOME/.config/nvim/init.vim
-    _log "Created init.vim link"
 fi
 
 if [ ! -f "$HOME/.tmux.conf" ]; then
@@ -86,6 +76,12 @@ fi
 if [ ! -f "$HOME/.config/ranger/rc.conf" ]; then
     ln -s $(pwd)/ranger/rc.conf $HOME/.config/ranger/rc.conf
     _log "Created ranger config link"
+fi
+
+if [ ! -f "$HOME/.config/lvim/config.lua" ]; then
+    mkdir -p $HOME/.config/lvim
+    ln -s $(pwd)/lvim/config.lua $HOME/.config/lvim/config.lua
+    _log "Created lunarvim config link"
 fi
 
 _log "Symlinks finished"
