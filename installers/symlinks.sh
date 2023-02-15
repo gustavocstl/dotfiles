@@ -20,11 +20,6 @@ if [ ! -f "$HOME/.gitconfig" ]; then
     _log "Created gitconfig link"
 fi
 
-if [ ! -f "$HOME/.config/nvim/coc-settings.json" ]; then
-    ln -s $(pwd)/vim/coc-settings.json $HOME/.config/nvim/coc-settings.json
-    _log "Created coc settings link"
-fi
-
 if [ ! -f "$HOME/.tmux.conf" ]; then
     ln -s $(pwd)/tmux/.tmux.conf $HOME/.tmux.conf
     _log "Created tmux.conf link"

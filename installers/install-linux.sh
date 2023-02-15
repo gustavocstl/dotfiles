@@ -27,7 +27,8 @@ if ! dpkg -s zsh >> /dev/null; then
     _log "Zsh installed"
 fi
 
-if ! dpkg -s neovim >> /dev/null; then
+which nvim >> /dev/null
+if [ $? != 0 ]; then
     curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
     chmod u+x nvim.appimage
     sudo mv nvim.appimage /usr/share/applications
@@ -183,7 +184,7 @@ which lvim >> /dev/null
 if [ $? != 0 ]; then
     LV_BRANCH='release-1.2/neovim-0.8' bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.sh)
     mkdir -p ~/.local/share/fonts
-    cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+    curl -fLo "~/.local/share/fonts/Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 fi
 
 if ! dpkg -s i3 >> /dev/null; then
