@@ -25,6 +25,30 @@ lvim.keys.normal_mode["<C-f>"] = { "<cmd>Telescope live_grep<CR>" }
 lvim.keys.normal_mode["<C-p>"] = { "<cmd>Telescope find_files<CR>" }
 lvim.keys.normal_mode["<leader>."] = "<Plug>(easymotion-overwin-f)"
 
+
+-- vimspector
+lvim.keys.normal_mode["<leader>dv"] = ":call vimspector#Launch()<CR>"
+lvim.keys.normal_mode["<Leader>de"] = ":call vimspector#Reset()<CR>"
+lvim.keys.normal_mode["<Leader>dc"] = ":call vimspector#Continue()<CR>"
+lvim.keys.normal_mode["<Leader>db"] = ":call vimspector#ToggleBreakpoint()<CR>"
+lvim.keys.normal_mode["<Leader>dT"] = ":call vimspector#ClearBreakpoints()<CR>"
+lvim.keys.normal_mode["<Leader>dk"] = "<Plug>VimspectorRestart"
+lvim.keys.normal_mode["<Leader>dh"] = "<Plug>VimspectorStepOut"
+lvim.keys.normal_mode["<Leader>dl"] = "<Plug>VimspectorStepInto"
+lvim.keys.normal_mode["<Leader>dj"] = "<Plug>VimspectorStepOver"
+lvim.keys.normal_mode["<Leader>di"] = "<Plug>VimspectorBalloonEval"
+lvim.keys.normal_mode["<Leader>d."] = "<Plug>VimspectorBreakpoints"
+vim.g.vimspector_enable_mappings = "HUMAN"
+vim.g.vimspector_install_gadgets = { 'vscode-go', 'debugpy', 'debugger-for-chrome', 'netcoredbg', 'vscode-node-debug2' }
+vim.fn.sign_define("vimspectorBP", {text = "🛑", texthl = "WarningMsg"})
+vim.fn.sign_define("vimspectorBPDisabled", {text = "⚫", texthl = "LineNr"})
+vim.fn.sign_define("vimspectorBPCond", {text = "🟡", texthl = "WarningMsg"})
+vim.fn.sign_define("vimspectorBPLog", {text = "🟤", texthl = "SpellRare"})
+vim.fn.sign_define("vimspectorPC", {text="▶", texthl = "MatchParen", linehl = "CursorLine"})
+vim.fn.sign_define("vimspectorPCBP", {text="▶", texthl = "MatchParen", linehl = "CursorLine"})
+vim.fn.sign_define("vimspectorCurrentThread", {text="▶", texthl = "MatchParen", linehl = "CursorLine"})
+vim.fn.sign_define("vimspectorCurrentFrame", {text="▶", texthl = "Special", linehl = "CursorLine"})
+
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
@@ -185,6 +209,7 @@ lvim.plugins = {
   {"lunarvim/colorschemes"},
   {"lourenci/github-colors"},
   {"easymotion/vim-easymotion"},
+  {"puremourning/vimspector"}
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
