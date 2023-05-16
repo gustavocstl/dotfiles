@@ -11,8 +11,8 @@ an executable
 
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save.enabled = false
-lvim.colorscheme = "github-colors"
+lvim.format_on_save.enabled = true
+lvim.colorscheme = "darkplus"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -48,6 +48,20 @@ vim.fn.sign_define("vimspectorPC", {text="▶", texthl = "MatchParen", linehl = 
 vim.fn.sign_define("vimspectorPCBP", {text="▶", texthl = "MatchParen", linehl = "CursorLine"})
 vim.fn.sign_define("vimspectorCurrentThread", {text="▶", texthl = "MatchParen", linehl = "CursorLine"})
 vim.fn.sign_define("vimspectorCurrentFrame", {text="▶", texthl = "Special", linehl = "CursorLine"})
+
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  { command = "black" },
+}
+
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  { command = "flake8", filetypes = { "python" } },
+  {
+    command = "codespell",
+    filetypes = { "javascript", "python" },
+  },
+}
 
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
