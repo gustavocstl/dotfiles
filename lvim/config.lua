@@ -12,7 +12,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "darkplus"
+lvim.colorscheme = "lunar"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -40,18 +40,19 @@ lvim.keys.normal_mode["<Leader>di"] = "<Plug>VimspectorBalloonEval"
 lvim.keys.normal_mode["<Leader>d."] = "<Plug>VimspectorBreakpoints"
 vim.g.vimspector_enable_mappings = "HUMAN"
 vim.g.vimspector_install_gadgets = { 'vscode-go', 'debugpy', 'debugger-for-chrome', 'netcoredbg', 'vscode-node-debug2' }
-vim.fn.sign_define("vimspectorBP", {text = "🛑", texthl = "WarningMsg"})
-vim.fn.sign_define("vimspectorBPDisabled", {text = "⚫", texthl = "LineNr"})
-vim.fn.sign_define("vimspectorBPCond", {text = "🟡", texthl = "WarningMsg"})
-vim.fn.sign_define("vimspectorBPLog", {text = "🟤", texthl = "SpellRare"})
-vim.fn.sign_define("vimspectorPC", {text="▶", texthl = "MatchParen", linehl = "CursorLine"})
-vim.fn.sign_define("vimspectorPCBP", {text="▶", texthl = "MatchParen", linehl = "CursorLine"})
-vim.fn.sign_define("vimspectorCurrentThread", {text="▶", texthl = "MatchParen", linehl = "CursorLine"})
-vim.fn.sign_define("vimspectorCurrentFrame", {text="▶", texthl = "Special", linehl = "CursorLine"})
+vim.fn.sign_define("vimspectorBP", { text = "🛑", texthl = "WarningMsg" })
+vim.fn.sign_define("vimspectorBPDisabled", { text = "⚫", texthl = "LineNr" })
+vim.fn.sign_define("vimspectorBPCond", { text = "🟡", texthl = "WarningMsg" })
+vim.fn.sign_define("vimspectorBPLog", { text = "🟤", texthl = "SpellRare" })
+vim.fn.sign_define("vimspectorPC", { text = "▶", texthl = "MatchParen", linehl = "CursorLine" })
+vim.fn.sign_define("vimspectorPCBP", { text = "▶", texthl = "MatchParen", linehl = "CursorLine" })
+vim.fn.sign_define("vimspectorCurrentThread", { text = "▶", texthl = "MatchParen", linehl = "CursorLine" })
+vim.fn.sign_define("vimspectorCurrentFrame", { text = "▶", texthl = "Special", linehl = "CursorLine" })
 
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "black" },
+  { command = "prettier" }
 }
 
 local linters = require "lvim.lsp.null-ls.linters"
@@ -220,10 +221,10 @@ lvim.builtin.treesitter.highlight.enable = true
 -- }
 
 lvim.plugins = {
-  {"lunarvim/colorschemes"},
-  {"lourenci/github-colors"},
-  {"easymotion/vim-easymotion"},
-  {"puremourning/vimspector"}
+  { "lunarvim/colorschemes" },
+  { "lourenci/github-colors" },
+  { "easymotion/vim-easymotion" },
+  { "puremourning/vimspector" }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)

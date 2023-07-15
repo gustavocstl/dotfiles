@@ -41,3 +41,4 @@ alias kex='kubectl exec -it'
 alias editvim="nvim ~/dotfiles/vim/.vimrc"
 alias editcustom="nvim ~/dotfiles/zsh/custom.sh"
 alias minikube-local-registry="~/dotfiles/scripts/minikube-local-registry.sh"
+
