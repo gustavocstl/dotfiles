@@ -6,11 +6,9 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
 
 export PATH="$GOPATH/bin:$PATH"
 
-if [[ "$(uname -s)" == "Darwin" ]]; then
-    . $HOME/dotfiles/zsh/zshrc-darwin.sh
-else
-    . $HOME/dotfiles/zsh/zshrc-linux.sh
-fi
+export PATH="$HOME/.cargo/bin:$PATH"
+alias e64="cat | tr -d \"\\n\" | base64 -w 0"
+alias d64="base64 -d"
 
 . $HOME/dotfiles/zsh/custom.sh
 
@@ -20,13 +18,14 @@ plugins=(
     dnf
     zsh-syntax-highlighting
     zsh-autosuggestions
+    zsh-fzf-history-search
 )
-
-source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 . $HOME/.asdf/asdf.sh
+
+source $ZSH/oh-my-zsh.sh
 
 alias minikube-env='eval $(minikube docker-env)'
 alias kg='kubectl get'
@@ -38,7 +37,5 @@ alias ka='kubectl apply -f'
 alias krmf='kubectl delete -f'
 alias krm='kubectl delete'
 alias kex='kubectl exec -it'
-alias editvim="nvim ~/dotfiles/vim/.vimrc"
-alias editcustom="nvim ~/dotfiles/zsh/custom.sh"
-alias minikube-local-registry="~/dotfiles/scripts/minikube-local-registry.sh"
-
+alias editvim="vim ~/dotfiles/vim/.vimrc"
+alias editcustom="vim ~/dotfiles/zsh/custom.sh"

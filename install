@@ -1,39 +1,53 @@
 #!/bin/bash
 
-echo "╓Setup"
+DISTRO="${1:-no}"
 
-_log()
-{
-    echo "╠═$1"
-}
-
-export -f _log
-
-if [ "$(uname -s)" == "Darwin" ]; then
-    . ./installers/install-darwin.sh
+if [ $DISTRO == "arch" ]; then
+    . ./installers/install-arch.sh
 else
-    . ./installers/install-linux.sh
+    . ./installers/install-debian.sh
 fi
 
 if [ ! -d "$HOME/.tmux/plugins" ]; then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     tmux source ~/.tmux.conf
-    _log "Tmux plugin manager installed"
 fi
 
 if [ ! -f "$HOME/.vim/autoload/plug.vim" ]; then
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    _log "Plug vim installed for vim"
 fi
 
 if [ ! -f "$HOME/.local/share/nvim/site/autoload/plug.vim" ]; then
     sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-    _log "Plug vim installed for nvim"
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 fi
 
-echo "╙Finished"
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 
-figlet dotfiles
-cowsay Dotfiles finished!
+
+if [ ! -d "$HOME/.vim/colors" ]; then
+    mkdir -p $HOME/.vim/colors
+fi
+
+if [ ! -f "$HOME/.vim/colors/zenbones.vim" ]; then
+    curl -fLo $HOME/.vim/colors/zenbones.vim https://raw.githubusercontent.com/mcchrish/zenbones.nvim/main/colors/zenbones.vim
+fi
+
+if [ ! -d "$HOME/.config/alacritty/themes" ]; then
+    mkdir -p $HOME/.config/alacritty/themes
+fi
+
+if [ ! -d "$HOME/.config/alacritty/themes/zenbones_dark.toml" ]; then
+    curl -fLo $HOME/.config/alacritty/themes/zenbones_dark.toml https://raw.githubusercontent.com/mcchrish/zenbones.nvim/main/extras/alacritty/zenbones_dark.toml
+fi
+
+
+if [ ! -d "/usr/share/fonts/jetbrains-mono" ]; then
+    sudo mkdir -p /usr/share/fonts/jetbrains-mono
+    sudo cp -r $(pwd)/fonts/jetbrains-mono/* /usr/share/fonts/jetbrains-mono
+fi
+
+mkdir -p ~/.vim/undo

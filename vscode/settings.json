@@ -1,0 +1,45 @@
+{
+    "git.openRepositoryInParentFolders": "never",
+    "window.zoomLevel": -1,
+    "vim.easymotion": true,
+    "vim.handleKeys": {
+        "<C-p>": false,
+        "<C-d>": true,
+        "<C-s>": false,
+        "<C-z>": false,
+        "<C-w>": false,
+        "<C-b>": false
+    },
+    "python.venvPath": "/home/gustavo/.cache/pypoetry/virtualenvs",
+    "editor.formatOnSave": true,
+    "vim.commandLineModeKeyBindings": [],
+    "terminal.integrated.profiles.linux": {
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux",
+            "args": [
+                "new-session",
+                "-A",
+                "-s",
+                "vscode-${workspaceRootFolderName}"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.linux": "tmux",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.languageServer": "Pylance",
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontWeight": "600",
+    "emmet.showSuggestionsAsSnippets": true,
+    "editor.wordBasedSuggestions": "allDocuments",
+    "editor.tabCompletion": "on",
+    "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on"
+    },
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.suggest.preview": true,
+    "vim.useSystemClipboard": true
+}

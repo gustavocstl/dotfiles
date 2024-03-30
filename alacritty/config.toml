@@ -1,0 +1,9 @@
+import = [
+    "~/.config/alacritty/themes/zenbones_dark.toml"
+]
+
+[font]
+size = 8.0
+
+[font.normal]
+family = "JetBrains Mono"
