@@ -57,5 +57,10 @@ if [ ! -f "$HOME/.xinitrc" ]; then
     ln -s $(pwd)/x11/.xinitrc $HOME/.xinitrc
 fi
 
+if [ ! -f "$HOME/.config/i3status/custom_i3status.sh" ]; then
+    mkdir -p $HOME/.config/i3status
+    ln -s $(pwd)/i3/custom_i3status.sh $HOME/.config/i3status/custom_i3status.sh
+fi
+
 rm $HOME/.config/Code/User/settings.json
 ln -s $(pwd)/vscode/settings.json $HOME/.config/Code/User/settings.json

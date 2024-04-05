@@ -40,7 +40,8 @@ unzip
 
 yay -S --noconfirm --needed \
 visual-studio-code-bin \
-adwaita-icon-theme-git
+adwaita-icon-theme-git \
+rofication
 
 # using cedilha. ref: https://gist.github.com/nilo/c2a31a0f9f29c88145ca
 setxkbmap -layout us -variant intl
