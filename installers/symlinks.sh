@@ -40,11 +40,6 @@ if [ ! -f "$HOME/.config/ranger/rc.conf" ]; then
     ln -s $(pwd)/ranger/rc.conf $HOME/.config/ranger/rc.conf
 fi
 
-if [ ! -f "$HOME/.config/lvim/config.lua" ]; then
-    mkdir -p $HOME/.config/lvim
-    ln -s $(pwd)/lvim/config.lua $HOME/.config/lvim/config.lua
-fi
-
 if [ ! -f "$HOME/.vimrc" ]; then
     ln -s $(pwd)/vim/.vimrc $HOME/.vimrc
 fi
