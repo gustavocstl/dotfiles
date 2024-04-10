@@ -36,7 +36,8 @@ pavucontrol \
 archlinux-wallpaper \
 feh \
 zip \
-unzip
+unzip \
+noto-fonts-emoji
 
 yay -S --noconfirm --needed \
 visual-studio-code-bin \
