@@ -6,11 +6,7 @@ vim vars
 ```
 
 archlinux:
-```sh
-./install arch
-```
 
-debian:
 ```sh
-./install debian
+./install
 ```

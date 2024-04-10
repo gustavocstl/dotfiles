@@ -2,11 +2,7 @@
 
 DISTRO="${1:-no}"
 
-if [ $DISTRO == "arch" ]; then
-    . ./installers/install-arch.sh
-else
-    . ./installers/install-debian.sh
-fi
+. ./installers/install-arch.sh
 
 if [ ! -d "$HOME/.tmux/plugins" ]; then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
