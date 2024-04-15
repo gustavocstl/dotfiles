@@ -13,19 +13,6 @@
     "python.venvPath": "/home/gustavo/.cache/pypoetry/virtualenvs",
     "editor.formatOnSave": true,
     "vim.commandLineModeKeyBindings": [],
-    "terminal.integrated.profiles.linux": {
-        "tmux": {
-            "path": "tmux",
-            "icon": "terminal-tmux",
-            "args": [
-                "new-session",
-                "-A",
-                "-s",
-                "vscode-${workspaceRootFolderName}"
-            ]
-        }
-    },
-    "terminal.integrated.defaultProfile.linux": "tmux",
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
     },

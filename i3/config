@@ -207,3 +207,5 @@ exec --no-startup-id feh --bg-center /usr/share/backgrounds/archlinux/geolanes.p
 exec --no-startup-id setxkbmap -layout us -variant intl
 exec --no-startup-id xset s off -dpms
 exec --no-startup-id rofication-daemon.py &> ~/rofication.log
+bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
+bindsym $mod+g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
