@@ -28,5 +28,6 @@
     },
     "editor.acceptSuggestionOnEnter": "smart",
     "editor.suggest.preview": true,
-    "vim.useSystemClipboard": true
+    "vim.useSystemClipboard": true,
+    "editor.defaultFormatter": "ms-python.black-formatter"
 }

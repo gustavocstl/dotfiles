@@ -203,10 +203,15 @@ focus_follows_mouse no
 bindsym Control+Mod1+l exec "i3lock -c 000000"
 bindsym --release Print exec scrot -z -s "$HOME/Pictures/Screenshots/Screenshot-%d-%b-%H%M.png" -e 'xclip -selection clipboard -t image/png $f'
 exec --no-startup-id ~/.screenlayout/default.sh
-exec --no-startup-id feh --bg-center /usr/share/backgrounds/archlinux/geolanes.png
-exec --no-startup-id setxkbmap -layout us -variant intl
-exec --no-startup-id xset s off -dpms
 exec --no-startup-id rofication-daemon.py &> ~/rofication.log
 bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
 bindsym $mod+g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
 bindsym $mod+Tab exec rofi -show window
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+exec_always --no-startup-id feh --bg-center /usr/share/backgrounds/archlinux/geolanes.png
+exec_always --no-startup-id setxkbmap -layout us -variant intl
+exec_always --no-startup-id xset s off -dpms
+
+exec ~/dotfiles/i3/startup.sh
