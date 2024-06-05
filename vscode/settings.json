@@ -13,9 +13,6 @@
     "python.venvPath": "/home/gustavo/.cache/pypoetry/virtualenvs",
     "editor.formatOnSave": true,
     "vim.commandLineModeKeyBindings": [],
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter"
-    },
     "python.languageServer": "Pylance",
     "editor.fontFamily": "JetBrains Mono",
     "editor.fontWeight": "600",
@@ -29,5 +26,14 @@
     "editor.acceptSuggestionOnEnter": "smart",
     "editor.suggest.preview": true,
     "vim.useSystemClipboard": true,
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "go.toolsManagement.autoUpdate": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    }
 }
