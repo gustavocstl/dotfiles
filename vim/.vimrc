@@ -2,6 +2,7 @@ colorscheme zenbones
 set background=dark
 set nocompatible
 set number
+set relativenumber
 set shiftwidth=4
 set tabstop=4
 set incsearch
@@ -21,6 +22,9 @@ syntax on
 
 nnoremap <C-p> :Files<CR>
 nnoremap <C-f> :Ag<CR>
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
 
 call plug#begin()
 Plug 'epmatsw/ag.vim'

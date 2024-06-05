@@ -1,6 +1,5 @@
 {
     "git.openRepositoryInParentFolders": "never",
-    "window.zoomLevel": -1,
     "vim.easymotion": true,
     "vim.handleKeys": {
         "<C-p>": false,
@@ -12,7 +11,7 @@
     },
     "python.venvPath": "/home/gustavo/.cache/pypoetry/virtualenvs",
     "editor.formatOnSave": true,
-    "vim.commandLineModeKeyBindings": [],
+    "vim.vimrc.enable": true,
     "python.languageServer": "Pylance",
     "editor.fontFamily": "JetBrains Mono",
     "editor.fontWeight": "600",
