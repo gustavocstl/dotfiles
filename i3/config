@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:JetBrains Mono 8
+font pango:Source Code Pro 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -194,14 +194,16 @@ bar {
     tray_output primary
 }
 
-workspace 1 output DP-1
-workspace 2 output HDMI-1
-workspace 3 output eDP-1
+workspace 1 output HDMI-0
+workspace 2 output HDMI-0
+workspace 3 output HDMI-0
+workspace 4 output DP-0
 
 focus_follows_mouse no
 
 bindsym Control+Mod1+l exec "i3lock -c 000000"
-bindsym --release Print exec scrot -z -s "$HOME/Pictures/Screenshots/Screenshot-%d-%b-%H%M.png" -e 'xclip -selection clipboard -t image/png $f'
+bindsym --release Print exec scrot -z -s -f "$HOME/Pictures/Screenshots/Screenshot-%d-%b-%H%M.png" -e 'xclip -selection clipboard -t image/png $f'
+bindsym --release Control+Shift+Print exec scrot -z "$HOME/Pictures/Screenshots/Screenshot-%d-%b-%H%M.png" -e 'xclip -selection clipboard -t image/png $f'
 exec --no-startup-id ~/.screenlayout/default.sh
 exec --no-startup-id rofication-daemon.py &> ~/rofication.log
 bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
@@ -209,9 +211,15 @@ bindsym $mod+g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
 bindsym $mod+Tab exec rofi -show window
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
+bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
 
 exec_always --no-startup-id feh --bg-center /usr/share/backgrounds/archlinux/geolanes.png
 exec_always --no-startup-id setxkbmap -layout us -variant intl
 exec_always --no-startup-id xset s off -dpms
+
+exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/gustavo/dotfiles/i3/workspace-1.json'"
+exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/gustavo/dotfiles/i3/workspace-2.json'"
+exec --no-startup-id "i3-msg 'workspace 3; append_layout /home/gustavo/dotfiles/i3/workspace-3.json'"
+exec --no-startup-id "i3-msg 'workspace 4; append_layout /home/gustavo/dotfiles/i3/workspace-4.json'"
 
 exec ~/dotfiles/i3/startup.sh

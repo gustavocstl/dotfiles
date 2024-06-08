@@ -18,8 +18,7 @@ plugins=(
     dnf
     zsh-syntax-highlighting
     zsh-autosuggestions
-    zsh-fzf-history-search
-)
+    zsh-fzf-history-search)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -27,15 +26,17 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-alias minikube-env='eval $(minikube docker-env)'
-alias kg='kubectl get'
-alias kgpo='kubectl get pods'
-alias kgpoa='kubectl get pods --all-namespaces'
-alias kgd='kubectl get deployments'
-alias kl='kubectl logs -f'
-alias ka='kubectl apply -f'
-alias krmf='kubectl delete -f'
-alias krm='kubectl delete'
-alias kex='kubectl exec -it'
+alias kg="kubectl get"
+alias kgpo="kubectl get pods"
+alias kgpoa="kubectl get pods --all-namespaces"
+alias kgd="kubectl get deployments"
+alias kl="kubectl logs -f"
+alias ka="kubectl apply -f"
+alias krmf="kubectl delete -f"
+alias krm="kubectl delete"
+alias kex="kubectl exec -it"
 alias editvim="vim ~/dotfiles/vim/.vimrc"
 alias editcustom="vim ~/dotfiles/zsh/custom.sh"
+alias vim="nvim"
+alias vi="nvim"
+alias lgit="lazygit"

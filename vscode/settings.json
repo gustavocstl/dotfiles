@@ -13,7 +13,7 @@
     "editor.formatOnSave": true,
     "vim.vimrc.enable": true,
     "python.languageServer": "Pylance",
-    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontFamily": "Source Code Pro",
     "editor.fontWeight": "600",
     "emmet.showSuggestionsAsSnippets": true,
     "editor.wordBasedSuggestions": "allDocuments",

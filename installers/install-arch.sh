@@ -2,9 +2,9 @@
 
 . $(pwd)/vars
 
-pacman -Qi yay >> /dev/null
+sudo pacman -Qi yay >> /dev/null
 if [ $? != 0 ]; then
-    pacman -S --needed git base-devel && \
+    sudo pacman -S --needed git base-devel && \
     git clone https://aur.archlinux.org/yay.git && \
     cd yay && \
     makepkg -si && \
@@ -14,7 +14,10 @@ fi
 
 sudo pacman -S --noconfirm --needed \
 alacritty \
+xorg \
+xorg-xdm \
 i3 \
+i3status \
 i3lock \
 i3-wm \
 wget \
@@ -37,12 +40,31 @@ archlinux-wallpaper \
 feh \
 zip \
 unzip \
-noto-fonts-emoji
+noto-fonts-emoji \
+neovim \
+ripgrep \
+fd \
+perl-json-xs \
+perl-anyevent-i3 \
+spotify-launcher \
+telegram-desktop \
+deluge \
+deluge-gtk \
+docker \
+docker-compose \
+copyq \
+vlc \
+firefox \
+xclip \
+rofi-calc
 
 yay -S --noconfirm --needed \
 visual-studio-code-bin \
 adwaita-icon-theme-git \
-rofication
+rofication \
+google-chrome \
+postman-bin \
+nordvpn-bin
 
 # using cedilha. ref: https://gist.github.com/nilo/c2a31a0f9f29c88145ca
 setxkbmap -layout us -variant intl
@@ -68,6 +90,13 @@ if [ $? != 0 ]; then
 	QT_IM_MODULE=cedilla
 	EOF'
 fi
+
+sudo systemctl enable xdm.service
+sudo systemctl enable nordvpnd.service && sudo systemctl start nordvpnd.service
+sudo systemctl enable docker.service && sudo systemctl start docker.service
+
+sudo usermod -aG nordvpn $USER
+sudo usermod -aG docker $USER
 
 . $(pwd)/zsh/setup.sh
 . $(pwd)/asdf/setup.sh

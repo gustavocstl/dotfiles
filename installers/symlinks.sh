@@ -44,12 +44,17 @@ if [ ! -f "$HOME/.vimrc" ]; then
     ln -s $(pwd)/vim/.vimrc $HOME/.vimrc
 fi
 
+if [ ! -f "$HOME/.config/nvim/init.lua" ]; then
+	ln -s $(pwd)/vim $HOME/.config/nvim
+fi
+
 if [ ! -f "$HOME/.Xresources" ]; then
     ln -s $(pwd)/x11/.Xresources $HOME/.Xresources
 fi
 
 if [ ! -f "$HOME/.xinitrc" ]; then
     ln -s $(pwd)/x11/.xinitrc $HOME/.xinitrc
+    sudo chmod 755 $HOME/.xinitrc
 fi
 
 if [ ! -f "$HOME/.config/i3status/custom_i3status.sh" ]; then

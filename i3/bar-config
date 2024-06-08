@@ -20,6 +20,10 @@ path_exists VPN {
     path = "/proc/sys/net/ipv4/conf/tun0"
 }
 
+path_exists VPN {
+    path = "/proc/sys/net/ipv4/conf/nordlynx"
+}
+
 disk "/" {
     format = "/: %free - Used: %percentage_used"
 }
