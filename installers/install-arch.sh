@@ -13,9 +13,9 @@ if [ $? != 0 ]; then
 fi
 
 sudo pacman -S --noconfirm --needed \
+networkmanager \
 alacritty \
 xorg \
-xorg-xdm \
 i3 \
 i3status \
 i3lock \
@@ -56,7 +56,11 @@ copyq \
 vlc \
 firefox \
 xclip \
-rofi-calc
+rofi-calc \
+ly \
+cups \
+cups-pdf \
+tree
 
 yay -S --noconfirm --needed \
 visual-studio-code-bin \
@@ -64,7 +68,9 @@ adwaita-icon-theme-git \
 rofication \
 google-chrome \
 postman-bin \
-nordvpn-bin
+nordvpn-bin \
+epson-inkjet-printer-escpr \
+epson-inkjet-printer-escpr2
 
 # using cedilha. ref: https://gist.github.com/nilo/c2a31a0f9f29c88145ca
 setxkbmap -layout us -variant intl
@@ -91,9 +97,10 @@ if [ $? != 0 ]; then
 	EOF'
 fi
 
-sudo systemctl enable xdm.service
 sudo systemctl enable nordvpnd.service && sudo systemctl start nordvpnd.service
 sudo systemctl enable docker.service && sudo systemctl start docker.service
+sudo systemctl enable ly.service && sudo systemctl start ly.service
+sudo systemctl enable cups.service && sudo systemctl start cups.service
 
 sudo usermod -aG nordvpn $USER
 sudo usermod -aG docker $USER

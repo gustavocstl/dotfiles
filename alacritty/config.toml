@@ -3,7 +3,7 @@ import = [
 ]
 
 [font]
-size = 10
+size = 12
 
 [font.normal]
 family = "Source Code Pro"

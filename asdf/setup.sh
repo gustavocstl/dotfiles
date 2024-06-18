@@ -15,10 +15,7 @@ if [ ! -d "$HOME/.asdf/installs/python" ]; then
     asdf install python 3.12.4 && \
     asdf global python 3.12.4 && \
     asdf reshim && \
-    pip install black && \
-    pip install psycopg2-binary && \
-    pip install pyright && \
-    pip install debugpy
+    pip install black psycopg2-binary pyright debugpy mdformat mdformat-tables
 fi
 
 if [ ! -d "$HOME/.asdf/installs/golang" ]; then

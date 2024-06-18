@@ -18,7 +18,8 @@ plugins=(
     dnf
     zsh-syntax-highlighting
     zsh-autosuggestions
-    zsh-fzf-history-search)
+    zsh-fzf-history-search
+    docker)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
