@@ -14,6 +14,7 @@ fi
 
 sudo pacman -S --noconfirm --needed \
 networkmanager \
+network-manager-applet \
 alacritty \
 xorg \
 i3 \
@@ -60,17 +61,20 @@ rofi-calc \
 ly \
 cups \
 cups-pdf \
-tree
+tree \
+rofimoji
 
 yay -S --noconfirm --needed \
 visual-studio-code-bin \
 adwaita-icon-theme-git \
 rofication \
 google-chrome \
+gimp \
 postman-bin \
 nordvpn-bin \
 epson-inkjet-printer-escpr \
-epson-inkjet-printer-escpr2
+epson-inkjet-printer-escpr2 \
+rofi-power-menu
 
 # using cedilha. ref: https://gist.github.com/nilo/c2a31a0f9f29c88145ca
 setxkbmap -layout us -variant intl
@@ -97,10 +101,11 @@ if [ $? != 0 ]; then
 	EOF'
 fi
 
-sudo systemctl enable nordvpnd.service && sudo systemctl start nordvpnd.service
-sudo systemctl enable docker.service && sudo systemctl start docker.service
-sudo systemctl enable ly.service && sudo systemctl start ly.service
-sudo systemctl enable cups.service && sudo systemctl start cups.service
+sudo systemctl enable nordvpnd && sudo systemctl start nordvpnd && \
+    sudo systemctl enable docker && sudo systemctl start docker && \
+    sudo systemctl enable ly && sudo systemctl start ly && \
+    sudo systemctl enable cups && sudo systemctl start cups && \
+    sudo systemctl enable teamviewerd && sudo systemctl start teamviewerd
 
 sudo usermod -aG nordvpn $USER
 sudo usermod -aG docker $USER

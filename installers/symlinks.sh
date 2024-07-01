@@ -62,5 +62,14 @@ if [ ! -f "$HOME/.config/i3status/custom_i3status.sh" ]; then
     ln -s $(pwd)/i3/custom_i3status.sh $HOME/.config/i3status/custom_i3status.sh
 fi
 
+if [ ! -f "$HOME/.config/rofi/config.rasi" ]; then
+    mkdir -p $HOME/.config/rofi
+    ln -s $(pwd)/rofi/config.rasi $HOME/.config/rofi/config.rasi
+fi
+
+if [ ! -f "$HOME/.config/rofimoji.rc" ]; then
+    ln -s $(pwd)/rofi/rofimoji.rc $HOME/.config/rofimoji.rc
+fi
+
 rm $HOME/.config/Code/User/settings.json
 ln -s $(pwd)/vscode/settings.json $HOME/.config/Code/User/settings.json

@@ -107,9 +107,6 @@ bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
-bindsym $mod+Alt+space focus mode_toggle
-
 # focus the parent container
 bindsym $mod+a focus parent
 
@@ -208,9 +205,10 @@ exec --no-startup-id ~/.screenlayout/default.sh
 exec --no-startup-id rofication-daemon.py &> ~/rofication.log
 bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
 bindsym $mod+g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
-bindsym $mod+Tab exec rofi -show window
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
+bindsym $mod+Tab exec rofi -show window
+bindsym $mod+Shift+p exec rofi -show p -modi p:rofi-power-menu
 bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
 
 exec_always --no-startup-id feh --bg-center /usr/share/backgrounds/archlinux/geolanes.png

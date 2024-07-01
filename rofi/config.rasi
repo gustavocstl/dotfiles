@@ -1,0 +1,18 @@
+configuration {
+  modes: "drun";
+  font: "mono 12";
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+  show-icons: true;
+  icon-theme: "Papirus";
+  icon {
+      theme: "Papirus";
+  }
+}
+@theme "glue_pro_blue"
