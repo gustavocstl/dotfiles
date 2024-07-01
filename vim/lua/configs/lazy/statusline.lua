@@ -53,7 +53,7 @@ end
 Statusline = {}
 
 Statusline.active = function()
-	local file_name = " %f"
+	local file_name = " %f %m"
 	local align_right = " %="
 	local file_type = " %y"
 	local percentage = " %p%%"
