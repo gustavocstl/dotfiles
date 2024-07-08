@@ -63,7 +63,11 @@ cups \
 cups-pdf \
 tree \
 rofimoji \
-reflector
+reflector \
+openconnect \
+nm-connection-editor \
+networkmanager-openconnect \
+webkit2gtk-4.1
 
 yay -S --noconfirm --needed \
 visual-studio-code-bin \
