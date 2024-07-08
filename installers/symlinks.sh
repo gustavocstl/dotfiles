@@ -71,5 +71,13 @@ if [ ! -f "$HOME/.config/rofimoji.rc" ]; then
     ln -s $(pwd)/rofi/rofimoji.rc $HOME/.config/rofimoji.rc
 fi
 
+sudo rm /etc/xdg/reflector/reflector.conf
+sudo ln -s $(pwd)/reflector/reflector.conf /etc/xdg/reflector/reflector.conf
+
+if [ ! -f "/etc/systemd/system/reflector.timer.d/override.conf" ]; then
+    sudo mkdir -p /etc/systemd/system/reflector.timer.d
+    sudo ln -s $(pwd)/reflector/reflector.timer.override.conf /etc/systemd/system/reflector.timer.d/override.conf
+fi
+
 rm $HOME/.config/Code/User/settings.json
 ln -s $(pwd)/vscode/settings.json $HOME/.config/Code/User/settings.json

@@ -62,7 +62,8 @@ ly \
 cups \
 cups-pdf \
 tree \
-rofimoji
+rofimoji \
+reflector
 
 yay -S --noconfirm --needed \
 visual-studio-code-bin \
@@ -105,7 +106,8 @@ sudo systemctl enable nordvpnd && sudo systemctl start nordvpnd && \
     sudo systemctl enable docker && sudo systemctl start docker && \
     sudo systemctl enable ly && sudo systemctl start ly && \
     sudo systemctl enable cups && sudo systemctl start cups && \
-    sudo systemctl enable teamviewerd && sudo systemctl start teamviewerd
+    sudo systemctl enable teamviewerd && sudo systemctl start teamviewerd && \
+    sudo systemctl enable reflector.timer && sudo systemctl start reflector.timer
 
 sudo usermod -aG nordvpn $USER
 sudo usermod -aG docker $USER
