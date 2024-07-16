@@ -67,7 +67,8 @@ reflector \
 openconnect \
 nm-connection-editor \
 networkmanager-openconnect \
-webkit2gtk-4.1
+webkit2gtk-4.1 \
+noto-fonts-cjk
 
 yay -S --noconfirm --needed \
 visual-studio-code-bin \
