@@ -68,7 +68,9 @@ openconnect \
 nm-connection-editor \
 networkmanager-openconnect \
 webkit2gtk-4.1 \
-noto-fonts-cjk
+noto-fonts-cjk \
+libreoffice-fresh \
+imagemagick
 
 yay -S --noconfirm --needed \
 visual-studio-code-bin \
