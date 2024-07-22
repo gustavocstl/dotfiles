@@ -213,7 +213,7 @@ bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
 for_window [window_role="alert"] floating enable
 no_focus [window_role="alert"]
 
-exec_always --no-startup-id feh --bg-center /usr/share/backgrounds/archlinux/geolanes.png
+exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/archlinux/geolanes.png
 exec_always --no-startup-id setxkbmap -layout us -variant intl
 exec_always --no-startup-id xset s off -dpms
 
