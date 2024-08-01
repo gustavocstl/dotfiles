@@ -198,7 +198,7 @@ workspace 4 output DP-0
 
 focus_follows_mouse no
 
-bindsym Control+Mod1+l exec "i3lock -c 000000"
+bindsym Control+Mod1+l exec "$HOME/dotfiles/i3/i3lock.sh -i /usr/share/backgrounds/archlinux/geolanes.png"
 bindsym --release Print exec scrot -z -s -f "$HOME/Pictures/Screenshots/Screenshot-%d-%b-%H%M.png" -e 'xclip -selection clipboard -t image/png $f'
 bindsym --release Control+Shift+Print exec scrot -z "$HOME/Pictures/Screenshots/Screenshot-%d-%b-%H%M.png" -e 'xclip -selection clipboard -t image/png $f'
 exec --no-startup-id ~/.screenlayout/default.sh
