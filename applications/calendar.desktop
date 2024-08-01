@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Calendar
+GenericName=Simple Calendar
+Exec=alacritty --hold -T calendar -o 'font.size=15' -e cal -y
+Icon=utilities-terminal
+Terminal=false
+Type=Application
+StartupNotify=true
+Keywords=calendar;
+Categories=Utility;Calendar;

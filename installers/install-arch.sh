@@ -70,7 +70,9 @@ networkmanager-openconnect \
 webkit2gtk-4.1 \
 noto-fonts-cjk \
 libreoffice-fresh \
-imagemagick
+imagemagick \
+tumbler \
+ffmpegthumbnailer
 
 yay -S --noconfirm --needed \
 visual-studio-code-bin \

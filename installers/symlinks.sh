@@ -71,6 +71,14 @@ if [ ! -f "$HOME/.config/rofimoji.rc" ]; then
     ln -s $(pwd)/rofi/rofimoji.rc $HOME/.config/rofimoji.rc
 fi
 
+if [ ! -f "$HOME/.local/share/applications/calc.desktop" ]; then
+    ln -s $(pwd)/applications/calc.desktop $HOME/.local/share/applications/calc.desktop
+fi
+
+if [ ! -f "$HOME/.local/share/applications/calendar.desktop" ]; then
+    ln -s $(pwd)/applications/calendar.desktop $HOME/.local/share/applications/calendar.desktop
+fi
+
 sudo rm /etc/xdg/reflector/reflector.conf
 sudo ln -s $(pwd)/reflector/reflector.conf /etc/xdg/reflector/reflector.conf
 
