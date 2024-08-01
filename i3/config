@@ -209,9 +209,10 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 bindsym $mod+Tab exec rofi -show window
 bindsym $mod+Shift+p exec rofi -show p -modi p:rofi-power-menu
-bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
+bindsym $mod+c exec alacritty -T calc -o 'font.size=15' -e qalc
 for_window [window_role="alert"] floating enable
 no_focus [window_role="alert"]
+for_window [title="calc"] floating enable
 
 exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/archlinux/geolanes.png
 exec_always --no-startup-id setxkbmap -layout us -variant intl

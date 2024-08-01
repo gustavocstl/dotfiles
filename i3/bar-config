@@ -15,13 +15,13 @@ order += "volume master"
 order += "tztime local"
 
 disk "/" {
-    format = "/: %free - Used: %percentage_used"
+    format = "/: %free - %percentage_used"
 }
 
 memory {
-    format = "Memory: %used/%total"
+    format = "%used/%total"
     threshold_degraded = "10%"
-    format_degraded = "MEMORY: %free"
+    format_degraded = "%free"
 }
 
 cpu_usage {
