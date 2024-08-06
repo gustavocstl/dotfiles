@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ ! -d "$HOME/.local/share/applications" ]; then
+    mkdir -p $HOME/.local/share/applications
+fi
+
 if [ ! -d "$HOME/.config" ]; then
     mkdir $HOME/.config
 fi
