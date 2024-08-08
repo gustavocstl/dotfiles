@@ -56,6 +56,10 @@ if [ ! -f "$HOME/.Xresources" ]; then
     ln -s $(pwd)/x11/.Xresources $HOME/.Xresources
 fi
 
+if [ ! -f "$HOME/.XCompose" ]; then
+    ln -s $(pwd)/x11/.XCompose $HOME/.XCompose
+fi
+
 if [ ! -f "$HOME/.xinitrc" ]; then
     ln -s $(pwd)/x11/.xinitrc $HOME/.xinitrc
     sudo chmod 755 $HOME/.xinitrc
