@@ -40,10 +40,4 @@ if [ ! -d "$HOME/.config/alacritty/themes/zenbones_dark.toml" ]; then
     curl -fLo $HOME/.config/alacritty/themes/zenbones_dark.toml https://raw.githubusercontent.com/mcchrish/zenbones.nvim/main/extras/alacritty/zenbones_dark.toml
 fi
 
-
-if [ ! -d "/usr/share/fonts/jetbrains-mono" ]; then
-    sudo mkdir -p /usr/share/fonts/jetbrains-mono
-    sudo cp -r $(pwd)/fonts/jetbrains-mono/* /usr/share/fonts/jetbrains-mono
-fi
-
 mkdir -p ~/.vim/undo
