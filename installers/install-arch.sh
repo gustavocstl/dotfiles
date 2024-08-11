@@ -72,7 +72,9 @@ noto-fonts-cjk \
 libreoffice-fresh \
 imagemagick \
 tumbler \
-ffmpegthumbnailer
+ffmpegthumbnailer \
+xf86-input-synaptics \
+brightnessctl
 
 yay -S --noconfirm --needed \
 visual-studio-code-bin \

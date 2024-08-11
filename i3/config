@@ -210,6 +210,10 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+Tab exec rofi -show window
 bindsym $mod+Shift+p exec rofi -show p -modi p:rofi-power-menu
 bindsym $mod+c exec alacritty -T calc -o 'font.size=15' -e qalc
+bindsym XF86KbdBrightnessUp exec brightnessctl --device='smc::kbd_backlight' set +30%
+bindsym XF86KbdBrightnessDown exec brightnessctl --device='smc::kbd_backlight' set 30%-
+bindsym XF86MonBrightnessUp exec brightnessctl --device='acpi_video0' set +30%
+bindsym XF86MonBrightnessDown exec brightnessctl --device='acpi_video0' set 30%-
 for_window [window_role="alert"] floating enable
 no_focus [window_role="alert"]
 for_window [title="calc"] floating enable
