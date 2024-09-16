@@ -7,8 +7,10 @@ return {
 				lua = { "stylua" },
 				python = { "black" },
 				javascript = { "prettier" },
+				typescript = { "prettier" },
 				go = { "gofmt", "goimports" },
 				markdown = { "mdformat" },
+				sql = { "pg_format" },
 			},
 			format_on_save = {
 				timeout_ms = 500,

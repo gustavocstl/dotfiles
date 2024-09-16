@@ -112,6 +112,7 @@ return {
 					"terraformls",
 					"yamlls",
 					"jsonls",
+					"sqlls",
 				},
 				handlers = {
 					function(server_name)
