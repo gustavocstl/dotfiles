@@ -1,2 +1,2 @@
-set number
-set relativenumber
+set nu
+set rnu
