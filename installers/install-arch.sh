@@ -74,7 +74,8 @@ imagemagick \
 tumbler \
 ffmpegthumbnailer \
 xf86-input-synaptics \
-brightnessctl
+brightnessctl \
+udiskie
 
 yay -S --noconfirm --needed \
 visual-studio-code-bin \
