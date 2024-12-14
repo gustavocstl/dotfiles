@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Qalc
 GenericName=Interactive Calculator
-Exec=alacritty -T calc -o 'font.size=15' -e qalc
+Exec=alacritty -T calc -o 'font.size=15' -e qalc -s 'autocalc 1'
 Icon=accessories-calculator
 Terminal=false
 Type=Application
