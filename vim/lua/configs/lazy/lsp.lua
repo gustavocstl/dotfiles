@@ -97,6 +97,7 @@ return {
 			end)
 
 			require("mason-lspconfig").setup({
+				automatic_installation = false,
 				ensure_installed = {
 					"lua_ls",
 					"pyright",
