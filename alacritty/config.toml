@@ -1,9 +1,10 @@
-import = [
-    "~/.config/alacritty/themes/zenbones_dark.toml"
-]
-
 [font]
-size = 9
+size = 11
 
 [font.normal]
 family = "Source Code Pro"
+
+[general]
+import = [
+    "~/.config/alacritty/themes/zenbones_dark.toml"
+]
