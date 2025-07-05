@@ -191,11 +191,6 @@ bar {
     tray_output primary
 }
 
-workspace 1 output HDMI-0
-workspace 2 output HDMI-0
-workspace 3 output HDMI-0
-workspace 4 output DP-0
-
 focus_follows_mouse no
 
 bindsym Control+Mod1+l exec "$HOME/dotfiles/i3/i3lock.sh -i /usr/share/backgrounds/archlinux/geolanes.png"
@@ -222,10 +217,5 @@ for_window [title="calendar"] floating enable
 exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/archlinux/geolanes.png
 exec_always --no-startup-id setxkbmap -layout us -variant intl
 exec_always --no-startup-id xset s off -dpms
-
-exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/gustavo/dotfiles/i3/workspace-1.json'"
-exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/gustavo/dotfiles/i3/workspace-2.json'"
-exec --no-startup-id "i3-msg 'workspace 3; append_layout /home/gustavo/dotfiles/i3/workspace-3.json'"
-exec --no-startup-id "i3-msg 'workspace 4; append_layout /home/gustavo/dotfiles/i3/workspace-4.json'"
 
 exec ~/dotfiles/i3/startup.sh
